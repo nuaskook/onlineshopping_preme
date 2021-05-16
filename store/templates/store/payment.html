@@ -1,0 +1,304 @@
+{% extends 'store/pay.html' %}
+{% load static %}
+{% block content %}
+<div class="row namtan">
+	
+	
+		<div class="container-fluid">
+			<div class="fontpay">
+			<p style="font-size: 430%; font-weight: 500; font-family: 'Bentham', serif;">Payment</p><br> </div>
+			<div class="d-flex justify-content-center">
+				<img class="tonl" src="{% static  'images/rod.png' %}">
+				<img class="tonp" src="{% static  'images/lili.jpg' %}">
+				<img class="tonp " src="{% static  'images/lili.jpg' %}">
+				<img class="tonl" src="{% static  'images/cdcd.png' %}">
+				<img class="tonk" src="{% static  'images/lili.jpg' %}">
+				<img class="tonk" src="{% static  'images/lili.jpg' %}">
+				<img class="tong"src="{% static  'images/deliver.png' %}">
+			</div>
+			<div class="d-flex justify-content-center">
+				<p style="font-size: 170%; font-family: 'GeosansLight', sans-serif;">Delivery Information 
+					<img class="tonm" src="{% static  'images/line.png' %}"> 
+					<img class="tonb" src="{% static  'images/line.png' %}">
+					Payment <img class="tony" src="{% static  'images/line.png' %}"> 
+					<img class="tonb" src="{% static  'images/line.png' %}">
+					<a style="opacity: 0.3; font-family: 'GeosansLight', sans-serif;">Order Information</a></p>
+				<div class="whiteplain" style="height: 7.5rem;"></div>
+			</div>
+			
+				
+			
+		</div>
+		<div class="col-md table-cart-responesive">
+            <div class="fontpay">
+			<div class="box-element" id="form-wrapper">
+				<form id="form">
+					<div id="user-info">
+						<div class="pmed" style="background-color: #f5f6f1; padding-bottom: 0.1rem;">
+						<p style="font-size: 270%; font-family: 'Bentham', serif; ">Payment Method </p></div> 
+						<div class="ex">
+							
+						<div class="radio" >
+							<div class="ku">
+                           <div class="pmed1 fonth" style="background-color:white; font-family: 'GeosansLight', sans-serif;">
+							<label><input id="form-button"  type="radio" name="optradio" value="Transfer" onchange="somefunction($(this).val())">
+								<a style="font-size: 180%;">Transfer</a></label>
+						</div></div>
+                        
+						<div class="radio pmed1 fonth" style="background-color:white; font-family: 'GeosansLight', sans-serif;">
+							<label><input id="form-button"  type="radio" name="optradio" value="Credit" onchange="somefunction($(this).val())">
+								<a style="font-size: 180%;">
+								Credit Card</a></label>
+						</div></div></div>
+					</div>	
+				</form>
+			</div>
+		
+		</div>
+
+			<br>
+			
+		</div>
+
+		<div class="col-md-3 col-lg-3">
+			<div class="fontpay">
+			<div class="box-element">
+				
+			<div class="pmed" style="background-color: #f6f5f1; padding-bottom: 0.1rem;"><p style="font-size: 270%; font-family: 'Bentham', serif;">Shipping Address</p></div>
+				<div class="pmed1" style="font-size: 140%; font-family: 'Kanit'; background-color: white;">
+					
+					2/433 ปาริชาติ จ.ปทุมธานี อ.คลองหลวง ถ.รังสิต-นครนายก 12125 
+				
+				</div>
+			
+                <div class="whiteplain" style="height: 2.4rem;"></div>
+				{{order.get_total}}
+				
+				
+					<div class="fontpay">
+					<div class="box-element">
+						
+						{{order.get_total}}
+						
+						<div class="pmed" style="background-color: #f6f5f1; padding-bottom: 0.1rem;"><p style="font-size: 270%;font-family: 'Bentham', serif; ">Order Summary</p></div>
+						<div class="pmed1" style="background-color:white;">
+							
+			
+							<table width="100%" style="font-size: 120%; font-family: 'GeosansLight', sans-serif; border: 0rem;">
+								<tr style="padding: 0rem;"><div class="whiteplain" style="height: 0.3rem; background-color: ;"></div></tr>
+								<tr>
+									<div class="border" style="width: 8rem; background-color: #EAD8D4; border-color: #EAD8D4;
+							color: black;
+								" ><b style="font-size: 220%;">Pre-order</b></div></tr>
+									<tr><div class="whiteplain" style="height: 0.8rem; background-color: ;"></div></tr>
+								<tr>
+									<tr style="padding: 0.5rem 0.7rem;">
+										<td rowspan="3" width="20%"><img  src="{% static  'images/face.png' %}" style="width: 6rem;"></td>
+										<td  style="font-family: 'GeosansLight', sans-serif;"width="50%"><b  >HERA
+											FACE DESIGNING BLUSHER
+											No. 1 ETERNAL PINK
+											</b></td>
+									</tr>
+									<tr style="padding: 0.5rem 0.78rem;">
+										<td><a style="color: #bcbcbc;">THB 1,347(1) </a>&emsp; &emsp;THB 1,347</td>
+									</tr>
+								</table>
+								
+									
+									
+								
+									
+									
+									
+								
+										<table width="100%" style="font-size: 120%; font-family: 'GeosansLight', sans-serif; border: 0rem;" >
+											<td colspan="2" style="border-bottom: 1px solid;">
+									
+											</td>
+											<tr style="padding: 0.5rem 0.3rem;">
+												<td><a style="font-family: 'GeosansLight', sans-serif;">Total product</a> (1)</td><td> THB 1,347 </td>
+												
+											</tr>
+											<tr style="padding: 0.5rem 0.3rem;">
+												<td><a style="font-family: 'GeosansLight', sans-serif;">Shipping</a></td><td width="27%">THB 0</td>
+												
+											</tr>
+											
+											
+											<td colspan="2" style="border-bottom: 0.1rem solid #cccccc; ">
+											<tr style="padding: 0.5rem 0.3rem;">
+												<td><b style="font-family: 'GeosansLight', sans-serif;">Total order</b></td><td><b> THB 1,347 </b></td>
+											</tr>
+										</table>
+						
+					</div></div>
+            <div class="whiteplain" style="height: 1.5rem;"></div>
+			<div class="nextei">
+            <a style="width: 100%; font-size: 205%; background-color: #ead8d4;"id="nextei" class="btn btn-block  border border1" type="submit" value="nextt" href="{% url 'transfer' %}">Next</a>
+			</div>
+			<div class="nextein">
+            <a style="width: 100%; font-size: 165%;"id="nextein" class="btn border border1 hidden " type="submit" value="nextc" href="{% url 'test' %}">Next Credit</a>
+			</div>
+			<div class="whiteplain" style="height: 2.5rem;"></div>
+		</div></div>
+	</div>
+	
+	</div>
+	<html>
+	
+		   
+		   <script>
+			 function somefunction(value){
+				if(value == "Transfer"){
+				document.getElementById("nextei").href = "{% url 'transfer' %}";
+				}
+				if(value == "Credit"){
+					document.getElementById("nextei").href="{% url 'credit' %}";
+				}
+			 }
+			  </script>
+	
+		<!--script>
+		function myFunction() {
+		  var x = document.getElementById("nextei");
+		  if (x.style.display === "none") {
+			x.classList.remove("hidden");
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
+		}
+		</script>
+		
+		<script>
+		function myFunction2() {
+		  var x = document.getElementById("nextein");
+		  if (x.style.display === "none") {
+			x.classList.remove("hidden");
+			x.style.display = "block";
+		  } else {
+			x.style.display = "none";
+		  }
+		}
+		</script>
+		
+
+
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		
+
+
+	</script>
+
+	<script src="https://www.paypal.com/sdk/js?client-id=AUET15IdMc0VzbZSSnQzCbdfagbusqoqt6XDJ2BedbDbBGfjyXxW7Y4c-48tNtnHsgXIvsM2DStx-MY0&currency=THB"></script>
+
+	<script>
+		
+
+		var total = '{{order.get_cart_total}}'
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+        	style: {
+                color:  'blue',
+                shape:  'rect',
+            },
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value:parseFloat(total).toFixed(2)
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    submitFormData()
+                });
+            }
+
+        }).render('#paypal-button-container');
+    </script>
+
+	<script type="text/javascript">
+
+		var form = document.getElementById('form')
+		form.addEventListener('submit', function(e){
+	    	e.preventDefault()
+	    	console.log('Form Submitted...')
+	    	document.getElementById('form-button').classList.add("hidden");
+	    	document.getElementById('nextei').classList.remove("hidden");
+			
+	    })
+
+		/*
+	    document.getElementById('make-payment').addEventListener('click', function(e){
+	    	submitFormData()
+	    })*/
+		
+	    function submitFormData(){
+	    	console.log('Payment button clicked')
+
+	    	var userFormData = {
+				'name':null,
+				'email':null,
+				'total':total,
+			}
+
+			var shippingInfo = {
+				'address':null,
+				'city':null,
+				'state':null,
+				'zipcode':null,
+			}
+/*
+			if (shipping != 'False'){
+	    		shippingInfo.address = form.address.value
+		    	shippingInfo.city = form.city.value
+		    	shippingInfo.state = form.state.value
+		    	shippingInfo.zipcode = form.zipcode.value
+	    	}
+
+	    	if (user == 'AnonymousUser'){
+	    		userFormData.name = form.name.value
+	    		userFormData.email = form.email.value
+	    	} */
+
+	    	console.log('Shipping Info:', shippingInfo)
+	    	console.log('User Info:', userFormData)
+
+	    	var url = "/process_order/"
+	    	fetch(url, {
+	    		method:'POST',
+	    		headers:{
+	    			'Content-Type':'applicaiton/json',
+	    			'X-CSRFToken':csrftoken,
+	    		}, 
+	    		body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
+	    		
+	    	})
+	    	.then((response) => response.json())
+	    	.then((data) => {
+				console.log('Success:', data);
+				alert('Transaction completed');  
+
+				cart = {}
+				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+	</script-->
+{% endblock content %}
+
+
+ 

@@ -1,0 +1,688 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <html lang="en">
+       <head>
+      <!-- Required meta tags -->
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Contact Us</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+      
+  
+      <title>Hello, world!</title>
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Bentham&display=swap');
+          @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400&display=swap');
+          body {
+          background-color: white
+          }
+          /*Global styles*/
+*,
+*::before,
+*::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+:root{
+--main-font:'Tajawal', sans-serif;
+--secondary-font: 'Herr Von Muellerhoff', cursive;
+--body-font:'Bentham', serif;
+--main-font-color-dark: #252525;
+--secondary-font-color: #fff;
+--body-font-color: #6d6b6b;
+}
+
+html{
+font-family: var(--body-font);
+font-size: 10px;
+color:var(--body-font-color);
+scroll-behavior: smooth;
+}
+
+body{
+     overflow-x: hidden;
+     height: 100vh;
+     justify-content: center;
+     align-items: center;
+}
+
+section{
+padding: 3.9rem 0;
+overflow: hidden;
+}
+
+img {
+width: 100%;
+max-width: 100%;
+}
+
+a {
+text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+.sub-product{
+    line-height: 2rem;
+    width: 20rem;
+    display: block;
+    position: absolute;
+    border-top: 3px solid #ead8d4;
+    background-color: rgb(255, 255, 255);
+    z-index: 100;
+    top:16rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 650ms ease;
+}
+
+.sub-product::before{
+    content:"";
+    position: absolute;
+    top: -2.5rem;
+    left: 3rem;
+    border: 1.2rem solid transparent;
+    border-bottom-color:#EAD8D4 ;
+}
+
+
+/*header*/
+header {
+width: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 1;
+background: #EAD8D4;
+}
+
+.nav-list {
+list-style: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 80%;
+height: 100vh;
+background-color:var(--main-font-color-dark);
+padding: 4.4rem;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+z-index:1250;
+transform:translateX(-100%);
+transition: transform .5s;
+}
+
+.nav-item {
+border-bottom: 10rem solid rgba(253, 253, 253, 0.3);
+}
+
+.nav-link {
+display: block;
+color: #534741;
+font-family: var(--main-font);
+font-size: 3rem;
+letter-spacing: 2px;
+margin-right: -1px;
+margin-left: -20px;
+margin-top: 100px;
+transition: color.5s;
+}
+
+.nav-link1{
+    display: block;
+color: #534741;
+font-family: var(--main-font);
+font-size: 1.4rem;
+letter-spacing: 2px;
+margin-right: 1px;
+margin-left: 20px;
+margin-top: 10px;
+transition: color.5s;
+}
+
+.search-container{
+    display: inline;
+    position: relative;
+    left: 1120px;
+    top: 10px;
+    }
+
+#search{
+position: absolute;
+top:-4.2rem; right:0.4rem;
+height:3rem;
+width:3rem;
+font-size: 1rem;
+padding:0 1rem;
+border:none;
+outline: none;
+border-radius: 5rem
+}
+
+.search:hover,
+.search:focus{
+    width: 25rem;
+}
+
+.fa-search{
+position: absolute;
+top:-3.7rem; right:1rem;
+font-size: 2rem;
+cursor: pointer;
+z-index: 1;
+color:#534741;
+   }
+
+:hover ~ #search{
+width: 25rem;
+   }
+
+.EN1 {
+    position: absolute;
+left: 1124px;
+text-transform: uppercase;
+font-family: var(--main-font);
+font-size: 2.5rem;
+letter-spacing: 2px;
+margin-right: 2px;
+margin-top: 98px;
+transition: color.5s;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #534741;
+}
+.EN3 {
+    position: absolute;
+left: 1170px;
+text-transform: uppercase;
+font-family: var(--main-font);
+font-size: 2.5rem;
+letter-spacing: 2px;
+margin-right: 2px;
+margin-top: 98px;
+transition: color.5s;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #534741;
+}
+.EN4 {
+    position: absolute;
+left: 1180px;
+text-transform: uppercase;
+font-family: var(--main-font);
+font-size: 2.8rem;
+letter-spacing: 2px;
+margin-right: 2px;
+margin-top: 98px;
+transition: color.5s;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #534741;
+}
+.EN2{
+    position: absolute;
+left: 1130px;
+width: 4rem;
+letter-spacing: 2px;
+margin-right: 2px;
+margin-top: 91px;
+transition: color.5s;
+    
+    display: flex;
+    align-items: center;
+    
+    color: #534741;
+}
+
+.logo {
+    position: absolute;
+width: 96px;
+height: 43px;
+left: 570px;
+top: 30px;
+color:#534741;
+font-style: normal;
+font-weight: normal;
+font-size: 75px;
+line-height: 43px;
+display: flex;
+align-items: center;
+transition: color.5s;
+    }
+
+.nav-link:hover {
+color: var(--secondary-font-color);
+}
+.nav-link1:hover {
+    color: #dfdedd;
+    }
+.nav-list li:hover > .sub-product{
+    top:13.7rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav{
+justify-content: space-between;
+}
+
+.nav-list{
+position: initial;
+width: initial;
+height: initial;
+background-color: transparent;
+padding: 0;
+justify-content: initial;
+flex-direction: row;
+transform: initial;
+transition: initial;
+}
+
+.nav-item{
+margin: 0 1.7rem;
+margin-left: 3rem;
+margin-right: 0.1rem;
+border: none;
+}
+
+.nav-link{
+    font-size: 2.2rem;
+}
+            .payment{
+              font-family:'Bentham';
+              flex-basis: 100%;
+              margin-bottom: 20px;
+              margin-top: 200px;
+              margin-left: 100px;
+              padding-bottom: 0;
+              display: block;
+              font-size:60px;
+              color:black;        
+}
+
+
+.img{
+  width: 2.5%;
+  position: relative;
+  margin-top:39px;
+  margin-left: 113px;
+}
+.correct{
+        font-family: 'Tajawal';
+        position: relative;
+              flex-basis: 100%;
+              margin-top: -39px;
+              margin-left: 150px;
+              padding-bottom: 0;
+              display: block;
+              font-size:26px;
+              color: black;
+             }
+    .group {
+      position: relative;
+      margin-top: 30px;
+              margin-left: 00px;
+    }        
+    .border{
+      border: 1px solid#534741;
+      width: 82%;
+      height: 120%;
+      position: relative;
+      margin: 0 auto;
+      margin-top: 38px
+         }
+
+.textinbox{
+    font-family:'Bentham';
+              flex-basis: 100%;
+              margin-top: 0px;
+              margin-left: 100px;
+              padding-bottom: 0;
+              display: block;
+              font-size:30px;
+              color: black; 
+}
+.num{font-family: 'Tajawal';
+        position: relative;
+              flex-basis: 100%;
+              margin-top:0 px;
+              margin-left: 110px;
+              padding-bottom: 0;
+              display: block;
+              font-size:24px;
+              color: red;
+
+}
+.container{
+  width: 100%;
+  position: absolute;
+  margin-left: 250px;
+  z-index: 1;
+}
+.progressbar li{
+  float: left;
+  width: 30rem;
+  position: relative;
+  text-align: center;
+  font-size:24px;
+  font-family: 'Tajawal';
+  color: black; 
+  margin-top: 20px;
+   margin-left: -11px;
+}
+.progressbar li:after{
+  content: '';
+  position: absolute;
+  width:75%;
+  height: 1px;
+  background:black;
+  top: 15px;
+  left: -50%;
+  z-index: -1;
+  margin-left: 285px;
+}
+.tr{
+    width:7rem;
+    margin-left: 306px;
+    margin-top: 10px;
+  }
+.card{
+    width:5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -70px;
+}
+.inf{
+    width:7rem;
+    margin-left: 890px;
+    margin-top: -72px; 
+}
+
+.detail1{
+    z-index: 1;
+       font-family: 'Tajawal';
+               font-size:20px;
+              color: black; 
+              margin-left: 260px;
+              margin-top: -15px;
+}
+
+.container2{
+  width: 80%;
+  position: absolute;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+.progressbar2 li{
+  float: left;
+  width: 20%;
+  position: relative;
+  text-align: center;
+}
+  .progressbar2 li:before{
+    content:"";
+  width: 35px;
+  height: 35px;
+  border: 1px solid #ead8d4;
+  display: block;
+  margin: 0 auto 10px auto;
+  border-radius: 50%;
+  background: #ead8d4;
+}
+
+.root2{
+    margin-left: 234px;
+  margin-top: -19px;
+  font-family: 'Tajawal';
+               font-size:18px;
+              color: black;
+              letter-spacing: -1px;
+        
+}
+.grp2{
+    margin-left: 242px;
+  margin-top: -560px;
+}
+.vl {
+  border-top: 1px solid black;
+  width:14rem;
+  margin-left: 123px;
+  margin-top: 35px;
+ }
+
+ .vl2 {
+  border-top: 1px solid black;
+  width:14rem;
+  margin-left: 325px;
+  margin-top:-1px;
+ }
+
+ .vl3 {
+  border-top: 1px solid black;
+  width: 14rem;
+  margin-left: 528px;
+  margin-top: -1px;
+ }
+ a.backto1:link{
+    color: black;
+   text-decoration: none;
+  } 
+  a.backto1:visited{
+    color: black;
+   text-decoration: none;
+  } 
+  a.backto1:hover{
+    color:black;
+   text-decoration: none;
+  } 
+  abackto1:active{
+    color: black;
+   text-decoration: none;
+  } 
+
+  .tckimg{
+    display: block;
+    margin-top: 120px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  }
+  .num
+  {font-family: 'Tajawal';
+        position: relative;
+              flex-basis: 100%;
+              margin-top:0 px;
+              margin-left: 110px;
+              padding-bottom: 0;
+              display: block;
+              font-size:24px;
+              color: red;
+  }
+  .tckimg{
+    display: block;
+    margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  }
+  .recname{
+    display: block;
+    margin-top: 99px;
+  margin-left:510px;
+  width: 2.4%;
+  }
+  .recname2{
+    display: block;
+    margin-top: -33px;
+    font-family: 'Tajawal';
+               font-size:18px;
+              color: black;
+              letter-spacing: -1px;
+              text-align: center;
+  }
+    </style>
+    </head>
+
+  <body>
+    <header>
+      <a href="index.html" class="logo">Premé</a>
+          <ul. class="nav-list">
+              <li class="nav-item">
+                  <a href="#" class="nav-link">Product</a>
+              <ul class="sub-product">
+              <li>
+                  <a href="#" class="nav-link1">HERA</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link1">JUNSEAMMOOL</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link1">LILYBYRED</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link1">PONY EFFECT</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link1">SULWHASOO</a>
+              </li>
+              </ul>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">|</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#"class="nav-link">Pre-ordered Agreement</a>
+              <ul class="sub-product">
+              <li>
+                  <a href="#" class="nav-link1">Pre-ordered Agreement</a>
+              </li>
+              </li>
+          </ul>    
+              <li class="nav-item">
+                  <a href="#" class="nav-link">|</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="nav-link">About Us</a>
+              <ul class="sub-product">
+              <li>
+                  <a href="#" class="nav-link1">Our Company</a>
+              </li>
+              <li>
+                  <a href="#" class="nav-link1">Contact Us</a>
+              </li>
+              </ul>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="EN1">|</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="EN2"><img src='https://svgshare.com/i/WcX.svg' title='pp' /></a>
+              </li>
+             <li class="nav-item">
+                  <a href="#" class="EN3">|</a>
+              </li>
+              <li class="nav-item">
+                  <a href="#" class="EN4">EN</a>
+              </li>
+              </ul.>
+  
+      <div class="search-container">
+          <label for="search" class="fas fa-search"></label>
+          <input type="search" placeholder="search" id="search">
+      </div>
+  </div>
+  </header>
+  
+
+  <div class="payment">
+    <p>Payment</p>
+  </div>
+  
+  <div class="root">
+    <div class="container">
+         <ul class="progressbar">
+           <li></li>
+           <li></li>
+         </ul>
+     </div>
+ </div>
+<div class="tr">
+    <img src='https://svgshare.com/i/Web.svg' title='tr' />
+ </div>
+
+<div class="card">
+    <img src='https://svgshare.com/i/We1.svg' title='card' />
+</div>
+
+<div class="inf">
+    <img src='https://svgshare.com/i/Wd2.svg' title='cp' />
+</div>
+
+<div class="detail1">
+    <p>Delivery Information <span style="padding-left:159px">
+    Payment <span style="padding-left:170px">
+    Order Information</p>
+</div>
+
+  <div class="group">
+    <div class="img">
+    <img src='https://svgshare.com/i/Wev.svg' title='cr' /></a> 
+  </div>
+  <div class="correct">
+    <th><a href="tracker" class="backto1"><p>Payment Confirm</p></a>
+  </div>
+</div>
+<div class="border">
+  <div class="textinbox">
+    <br>Tracking Code<br>
+    </div>
+    <div class="num">
+      <p><span style="padding-left:26px"></span>EH568939320TH</p>
+  </div>
+       
+</div>
+<div class="grp2">
+    <div class="vl"></div>
+    <div class="vl2"></div>
+    <div class="vl3"></div>
+  </div>
+
+  <div class="root2">
+    <div class="container2">
+         <ul class="progressbar2">
+           <li class="qactive">Pre-Transit</li>
+           <li class="qactive">In Transit</li>
+           <li class="qactive">Out for delivery</li>
+           <li class="qactive">Delivered</li>
+           </ul>
+     </div>
+</div>
+
+<div class="recname">
+  <img src="{% static 'images/noun_correct_2405129-removebg-preview.png'%}" alt="aa">
+</div>
+<div class="recname2">
+  Recipient Name : ChanonZa
+</div>
+<div class="tckimg">
+  <img src="{% static 'images/imgtracktest2.png'%}" alt="aa">
+</div>
+</body>
+
+</html>

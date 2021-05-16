@@ -1,0 +1,135 @@
+{% extends 'store/pay.html' %}
+{% load static %}
+{% block content %}
+<div class="row namtan">
+	<div class="whiteplain"></div>
+	
+	<div class="container-fluid">
+		<div class="fontpay">
+		<p style="font-size: 430%; font-weight: 500; font-family: 'Bentham', serif;">Payment</p><br> </div>
+		<div class="d-flex justify-content-center">
+			<img class="tonl" src="{% static  'images/rod.png' %}">
+			<img class="tonp" src="{% static  'images/lili.jpg' %}">
+			<img class="tonp " src="{% static  'images/lili.jpg' %}">
+			<img class="tonl" src="{% static  'images/cdcd.png' %}">
+			<img class="tonk" src="{% static  'images/lili.jpg' %}">
+			<img class="tonk" src="{% static  'images/lili.jpg' %}">
+			<img class="tong"src="{% static  'images/deliver.png' %}">
+		</div>
+		<div class="d-flex justify-content-center">
+			<p style="font-size: 170%; font-family: 'GeosansLight', sans-serif;">Delivery Information 
+				<img class="tonm" src="{% static  'images/line.png' %}"> 
+				<img class="tonb" src="{% static  'images/line.png' %}">
+				Payment <img class="tony" src="{% static  'images/line.png' %}"> 
+				<img class="tonb" src="{% static  'images/line.png' %}">
+				<a style="opacity: 0.3;">Order Information</a></p>
+			<div class="whiteplain" style="height: 7.5rem;"></div>
+		</div>
+				
+			
+		</div>
+		<div class="col-sm-3">
+			<div class="cod" style="background-color: #f5f6f1;">
+			<div class="box-element" id="form-wrapper">
+					<div id="user-info">
+						<div class="radio">
+							<div class="fontpay">
+							<label style=" font-weight: 500; font-size: smaller; font-family: 'Bentham', serif;"><input id="form-button"  type="radio" name="optradio" value="Transfer"> Transfer</label>
+						</div></div>
+					</div>	
+			</div>
+		</div>
+	
+			<br>
+			
+		</div>
+		
+		<div class="row"></div>
+		<div class="col-lg-7 " style="font-size: 175%; font-weight: 300; font-family: 'GeosansLight', sans-serif;">
+			<div class="box-element">
+				<div class="center">
+		
+				<div class="whiteplain" style="height: 7rem;"></div>
+				<img style="width: 17rem;" src="http://pngimg.com/uploads/qr_code/qr_code_PNG34.png">
+					 <!--img style="width: 20rem;"src="https://icon-library.com/images/visa-master-icon/visa-master-icon-5.jpg"-->
+		   <div class="whiteplain" style="height: 1rem; "></div>
+		   Mr. Harry Potter
+					</div>
+				
+					<div class="whiteplain" style="height: 5rem;"></div>
+						
+								<div class="row">
+									<div class="col-sm-12">
+										<form>
+											<div class="center">
+											<div class="form-group">
+											<div class="d-flex justify-content-center">
+												<label class="form-control-file pmed1 " for="my-file-selector" style="text-align: center; width: 60%;padding: 0.5%; font-family: 'GeosansLight', sans-serif;">
+													<input id="my-file-selector" type="file" style="display:none" 
+													onchange="$('#upload-file-info').text(this.files[0].name)" required>
+											
+													Upload Photo
+												</label><span class='label label-info' id="upload-file-info"></span>
+												
+												
+											  
+											</div></div></div>
+										  </form>
+										  
+									</div></div>
+								</div>
+	
+							
+									
+								
+							
+							
+								
+						
+				</div>
+			</div>
+			<div class="whiteplain" style="height: 5rem;"
+			></div>	
+			<a style="width: 27rem; font-size: 205%; font-family: 'GeosansLight', sans-serif; background-color: #ead8d4;"id="form-button" 
+			class="btn btn-block border border1 float-right" type="submit" 
+			
+			value="confirmation" href="{% url 'tracker' %}">Order confirmation</a> 
+			
+		   
+		</div>
+		<div class="whiteplain" style="height: 7rem;"
+		></div>	
+		
+
+	<!--script type="text/javascript">
+		var shipping = '{{order.shipping}}'
+	    	console.log('Shipping Info:', shippingInfo)
+	    	console.log('User Info:', userFormData)
+
+	    	var url = "/process_order/"
+	    	fetch(url, {
+	    		method:'POST',
+	    		headers:{
+	    			'Content-Type':'applicaiton/json',
+	    			'X-CSRFToken':csrftoken,
+	    		}, 
+	    		body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
+	    		
+	    	})
+	    	.then((response) => response.json())
+	    	.then((data) => {
+				console.log('Success:', data);
+				alert('Transaction completed');  
+
+				cart = {}
+				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+	</script-->
+{% endblock content %}
+
+
+ 

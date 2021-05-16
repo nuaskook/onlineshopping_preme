@@ -1,0 +1,176 @@
+{% extends 'store/pay.html' %}
+{% load static %}
+{% block content %}
+
+<div class="row namtan">
+<div class="whiteplain"></div>
+
+<div class="container-fluid">
+    <div class="fontpay">
+    <p style="font-size: 430%; font-weight: 500; font-family: 'Bentham', serif;">Payment</p><br> </div>
+    <div class="d-flex justify-content-center">
+        <img class="tonl" src="{% static  'images/rod.png' %}">
+        <img class="tonp" src="{% static  'images/lili.jpg' %}">
+        <img class="tonp" src="{% static  'images/lili.jpg' %}">
+        <img class="tonl" src="{% static  'images/cdcd.png' %}">
+        <img class="tonk" src="{% static  'images/lili.jpg' %}">
+        <img class="tonk" src="{% static  'images/lili.jpg' %}">
+        <img class="tong"src="{% static  'images/deliver.png' %}">
+    </div>
+    <div class="d-flex justify-content-center">
+        <p style="font-size: 170%; font-family: 'GeosansLight', sans-serif;">Delivery Information 
+            <img class="tonm" src="{% static  'images/line.png' %}"> 
+            <img class="tonb" src="{% static  'images/line.png' %}">
+            Payment <img class="tony" src="{% static  'images/line.png' %}"> 
+            <img class="tonb" src="{% static  'images/line.png' %}">
+            <a style="opacity: 0.3;">Order Information</a></p>
+        <div class="whiteplain" style="height: 7.5rem;"></div>
+    </div>
+   
+            
+        
+    </div>
+    <div class="col-sm-3">
+        <div class="cod" style="background-color: #f5f6f1;">
+        <div class="box-element" id="form-wrapper">
+                <div id="user-info">
+                    <div class="radio">
+                        <div class="fontpay">
+                        <label style="font-weight: 500; font-size: smaller; font-family: 'Bentham', serif;"><input id="form-button"  type="radio" name="optradio" value="Credit"> Credit or Debit</label>
+                    </div></div>
+                </div>	
+        </div>
+    </div>
+
+        <br>
+        
+    </div>
+    
+    <div class="col-lg-7 fonth" style="font-size: 195%; color: #696969;">
+        <div class="box-element">
+            <img style="width: 17rem;" src="{% static  'images/master.png' %}">
+                 <!--img style="width: 20rem;"src="https://icon-library.com/images/visa-master-icon/visa-master-icon-5.jpg"-->
+       <div class="whiteplain" style="height: 4.5rem;"></div>
+                </div>
+        
+            
+                    <div class="namtan" style="font-family: 'GeosansLight', sans-serif;">
+                        <div class="">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        
+                                        
+                                        
+                                        <label for="ccnumber">Card Number</label><a style="color: red;">*</a>
+                                        <div class="input-group">
+                                            <input style="height: 4rem; font-size: 100%;"class="form-control input-lg" type="text" placeholder="" autocomplete="cc-number" maxlength="19"required>
+                                            
+                                        </div>
+    
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+                                        <label for="name">Card Holder Name</label><a style="color: red;">*</a>
+                                        <input style="height: 4rem; font-size: 100%;"class="form-control" id="name" type="text" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="form-group col-sm-4">
+                                    <label for="ccmonth">Month</label><a style="color: red;">*</a>
+                                    <select class="form-control" id="ccmonth" style="height: 4rem; font-size: 100%;">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-sm-4">
+                                    <label for="ccyear">Year</label><a style="color: red;">*</a>
+                                    <select class="form-control" id="ccyear" style="height: 4rem; font-size: 100%;">
+                                        <option>2021</option>
+                                        <option>2022</option>
+                                        <option>2023</option>
+                                        <option>2024</option>
+                                        <option>2025</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="form-group">
+                                        <label for="cvv">CVV/CVC</label><a style="color: red;">*</a>
+                                    <a href="#" title="CVV is a credit or debit card number, the last three digit number printed on the signature panel"><img style="width: 2rem;" src="{% static  'images/qu.png' %}"></a> 
+                                    <input style="height: 4rem; font-size: 100%;" type="password" class="form-control pr-5" maxlength="3" placeholder="" required> </div>
+                                    </div>
+                                </div>
+                                <div class="whiteplain" style="height: 1.5rem;"></div>
+                                    <div class="form-group mb-0">
+                                        <label><input id="form-button"  type="radio" name="optradio" value="Credit"> Don't want to save the card</label>
+                                    </div>
+
+                                    <div class="whiteplain" style="height: 1.5rem;"></div>
+                                
+                            
+                        
+                        
+                            
+                    
+            </div>
+        </div>
+    <div class="">
+        <a style="width: 50%; font-size: 100%; font-family: 'GeosansLight', sans-serif; background-color: #ead8d4;"id="form-button" 
+        class="btn  btn-block border border1" type="submit" 
+        value="confirmation" href="{% url 'tracker' %}">Order confirmation</a>
+       
+  
+    </div>
+    <div class="whiteplain" style="height: 5rem;"
+    ></div>
+
+    
+	
+<!--script>
+		var shipping = '{{order.shipping}}'
+	    	console.log('Shipping Info:', shippingInfo)
+	    	console.log('User Info:', userFormData)
+
+	    	var url = "/process_order/"
+	    	fetch(url, {
+	    		method:'POST',
+	    		headers:{
+	    			'Content-Type':'applicaiton/json',
+	    			'X-CSRFToken':csrftoken,
+	    		}, 
+	    		body:JSON.stringify({'form':userFormData, 'shipping':shippingInfo}),
+	    		
+	    	})
+	    	.then((response) => response.json())
+	    	.then((data) => {
+				console.log('Success:', data);
+				alert('Transaction completed');  
+
+				cart = {}
+				document.cookie ='cart=' + JSON.stringify(cart) + ";domain=;path=/"
+
+				window.location.href = "{% url 'store' %}"
+
+				})
+	    }
+	</script-->
+{% endblock content %}
+
+
+ 

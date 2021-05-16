@@ -1,0 +1,334 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bentham&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/assets/css/style1.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+
+	/*import เรียก font มาใช้*/
+	@font-face {
+		font-family: 'geosanslightregular';
+		src: url('/assets/Font/geosanslight-webfont.woff2') format('woff2'),
+			url('/assets/Font/geosanslight-webfont.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+
+	}
+	/* latin */
+	@font-face {
+	font-family: 'Bentham';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/bentham/v11/VdGeAZQPEpYfmHglGWsxCQ.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+	}
+
+	body {
+		font-family: 'geosanslightregular','Bentham', sans-serif;
+		background-color: #fbfbfb;
+		color: #5B4543 !important;
+	}
+
+
+	a {
+		color: #5B4543 !important;
+	}
+
+	table{
+		border-collapse: inherit;
+		border: 1.5px solid #5B4543;
+	}
+
+	#tableStyle{
+		border-collapse: collapse;
+	}
+
+	tr{
+		padding: 5px 10px;
+	}
+	td{
+		padding: inherit;
+	}
+	mark {
+		background-color: #ead8d4;
+		color: #5B4543;
+		}
+
+	hr{
+		color: #5b4543;
+		border: 1px groove #cfcece;
+		opacity: 0.4;
+		margin: 0px;
+	}
+
+	/*CSS แต่งปุ่ม*/
+	.btn{
+		border-radius: 0px;
+	}
+	.btn-outline-secondary {
+		color: #343a40;
+		background-color: transparent;
+		background-image: none;
+		border-color: #d3dae0;
+		font-weight: bolder;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.btn-success{
+		color: #5b4543;
+		background-color: #ead8d4;
+		border-color: #ead8d4;
+		font-weight: bolder;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	.btn-success:hover {
+		color: #5b4543;
+		background-color: #f5f1ef;
+		border-color: #c8c7c7;
+	}
+	.btn-success.focus, .btn-success:focus  {
+		box-shadow: 0 0 0 0.2rem rgb(91 69 67 / 50%);
+	}
+	.btn-success:not(:disabled):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+		color: #fff;
+		background-color: #c8c7c7;
+		border-color: #5b4543;
+	}
+	.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus, .show>.btn-success.dropdown-toggle:focus {
+		box-shadow: 0 0 0 0.2rem rgb(91 69 67 / 50%);
+	}
+
+	.nav-account {
+		width: 15%;
+	}
+
+	@media only screen and (max-width: 700px) {
+
+		.table-cart {
+			display: none;
+		}
+
+		.table-cart-responesive {
+			display: inline-block !important;
+		}
+
+		.nav-account {
+			width: 50%;
+		}
+
+	}
+
+	</style>
+
+
+	<title>Prem&#233;</title>
+</head>
+<body>
+	<header style="color: #5B4543; background-color: #ead8d4; height: 8.6rem;">
+		<div class="container">
+			<div class="row">
+				<div class="col-md" style="text-align: center; font-family: 'Bentham'; ">
+					<h1 style="font-size: 70px;">Prem&#233;</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					<nav class="navbar navbar-expand-lg navbar-light" style="padding: 0px; height: 3rem;"> 
+
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+
+						<div class="collapse navbar-collapse" id="navbarNavDropdown">
+							<ul class="navbar-nav w-100"> 
+								<li class="nav-item">
+									<a class="nav-link" href="#1" style="font-size: 150%; font-weight: 600; letter-spacing: 1.5px;">Product |</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#2" style="font-size: 150%;font-weight: 600;letter-spacing: 1.5px;">Pre-ordered Agreement |</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#3" style="font-size: 150%;font-weight: 600;letter-spacing: 1.5px;">About Us</a>
+								</li>
+
+							</ul>
+							
+							<ul class="navbar-nav nav-account">
+								<li class="nav-item">
+									<a href="#"><img style="width: 30px; height: 30px;" src="/assets/img/Search_27183915.png"> |</a> 
+									<a href="#"><img style="width: 30px; height: 30px;" src="/assets/img/profile_1222484.png"> |</a> 
+									<a href="#" style="font-weight: 600; font-size: 120%;">EN</a>
+								</li>
+							</ul>
+							
+						</div>
+					</nav>
+
+					
+
+					<!-- <ul class="nav nav-justified">
+						<li class="nav-item" style="text-align: left; margin-left: 50px; font-size: 20px;">
+							<p><a href="#1">Product</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+							<a href="#2">Pre-ordered Agreement</a>&nbsp;&nbsp; | &nbsp;&nbsp; 
+							<a href="#">About Us</a>
+							</p>
+						</li>
+						<li class="nav-item" style="text-align: right; margin-right: 50px; font-size: 20px;">
+							<img style="width: 30px; height: 30px;" src="assets/img/Search_2718392.png"> | 
+							<img style="width: 30px; height: 30px;" src="assets/img/profile_1222484.png"> | 
+							<a href="#">EN</a>
+						</li>
+					</ul> -->
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container" style="margin-top: 20px;">
+		
+		<h1 style="font-family: 'Bentham';">Cart</h1>
+		
+		<div class="row">
+			<div class="col-md" style="padding: 10px;">
+				<table class="table-cart" width="100%">
+					<tr style="background-color: #F5F1EF; border-bottom: 2px solid">
+						<td colspan="6" style="border-bottom: 2px solid"><h3 style="font-family: 'Bentham';">Your Cart</h3></td></tr>
+					<tr style="font-size: 20px;">
+						<td colspan="2" width="30%"><b>Product</b></td>
+						<td width="10%"><b>Price</b></td>
+						<td width="10%" align="center"><b>Quantity</b></td>
+						<td width="10%"><b>Total</b></td>
+						<td width="5%"><b></b></td>
+					</tr>
+					<tr style="padding: 0 0 0 10px;"><td colspan="5"><hr></td></tr>
+
+					<tr><td colspan="6" style="font-family: 'Bentham';"><mark><b>Pre-order</b></mark></p></td></tr>
+					<tr>
+						<td width="10%" align="left" rowspan="2"><img src="/assets/img/FACE DESIGNING BLUSHER.png" style="width: 100px;"></td>
+						<td width="23%" align="left"><p>HERA FACE DESIGNING BLUSHER
+							</p></td>
+						<td width="10%" rowspan="2"><p>1,347 THB</p></td>
+						<td width="10%" rowspan="2">
+							<table border="1" id="tableStyle">
+								<tr style="padding: 0px 10px;"><td style="font-size: 20px;"><a href="#">-</td><td width="50%" align="center">1</td><td style="font-size: 20px;"><a href="#">+</a></td>
+								</tr>
+							</table>
+						</td>
+						<td width="10%" rowspan="2"><p>THB 1347</p></td>
+						<td width="5%" align="right" rowspan="2"><a href="#"><img src="/assets/img/noun_bin_2025468.png" style="width: 20px;"></a></td>
+					</tr>
+					<tr><td style="font-size: 22px; color: #cfd3d8">01 ETERNAL PINK</td></tr>
+
+					
+					
+
+
+				</table>
+
+				
+
+			</div>
+
+			<div class="col-md table-cart-responesive" style="padding: 10px;display: none;">
+				<table width="100%">
+
+					<tr style="background-color: #F5F1EF; border-bottom: 2px solid">
+						<td>
+							<h3 style="font-family: 'Bentham';">Your Cart</h3>
+						</td>
+					</tr>
+
+					<tr>
+						<td style="text-align: center;">
+							<mark><b>Pre-order</b></mark>
+
+							<br>
+
+							<img src="/assets/img/FACE DESIGNING BLUSHER.png" style="width: 100px;">
+							
+							<br>
+
+							<p>Skin Setting Tone-up Sun Cushion (refill included)</p>
+
+							<p>THB 1347</p>
+
+							<center>
+								<table border="1" id="tableStyle">
+									<tr style="padding: 0px 10px;">
+										<td style="font-size: 20px;"><b>-</b></td>
+										<td width="50%" align="center">1</td>
+										<td style="font-size: 20px;"><b>+</b></td>
+									</tr>
+								</table>
+							</center>
+
+							<br>
+
+							<p>THB 1347</p>
+
+							<p><img src="/assets/img/noun_bin_2025468.png" style="width: 20px;"></p>
+						</td>
+					</tr>
+
+					<tr style="padding: 0 0 0 10px;"><td><hr></td></tr>
+
+					
+
+					<tr>
+						<td style="border-top: 2px solid; padding: 10px 30px;text-align: center;">
+							<img src="/assets/img/noun_bin_2025468.png" style="width: 20px;"> Remove
+						</td>
+					</tr>
+
+					
+				</table>
+			</div>
+
+			<div class="col-md-3 col-lg-3" style="padding: 10px;">
+				<table width="100%">
+					<tr style="background-color: #f6f5f1;;">
+						<td colspan="2" style="border-bottom: 2px solid;">
+							<h3 style="font-family: 'Bentham';">Total shopping cart</h3>
+						</td>
+					</tr>
+					<tr>
+						<td><b>Total product</b>(1 items)</td><td>THB 1347</td>
+					</tr>
+					<tr><td colspan="2">&emsp;Pre-order (1)</td></tr>
+					<td colspan="2"><hr></td></>
+					<tr>
+						<td><b>Total shopping cart</b></td><td><b>THB 1347</b></td>
+					</tr>
+				</table>
+			</div>
+
+		</div>
+
+		<div class="row justify-content-md-center">
+			<div class="col-md-3" style="text-align: center;margin: 10px;">
+				<button type="button" class="btn btn-outline-secondary">Continue Shopping</button>
+			</div>
+			<div class="col-md-3" style="text-align: center;margin: 10px;">
+					<button type="button" class="btn btn-success"><a href="{% url 'checkout' %}">Proceed to check out</a></button>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

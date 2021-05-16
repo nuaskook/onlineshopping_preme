@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Prem&#233;</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="product.css">
+
+    <script>
+
+        window.onload = function() {
+        
+            var btnFeature = document.getElementById("btnFeature");
+            // var btnFeatureRs = document.getElementById("btnFeatureRs");
+            var divDropdown = document.getElementById("feature-content");
+            var divDropdownRs = document.getElementById("feature-content-responesive");
+            
+            btnFeature.onclick = function(){
+                divDropdown.classList.toggle("show");
+            };
+
+            // btnFeatureRs.onclick = function(){
+            //     divDropdownRs.classList.toggle("show");
+            // };
+
+            $('.btn-search').click(function () {
+                $('.search').toggleClass('expanded');
+            });
+
+        }
+
+        function openNav() {
+            document.getElementById("left-menu-rs").style.width = "250px";
+        }
+        
+        function closeNav() {
+            document.getElementById("left-menu-rs").style.width = "0";
+        }
+
+    </script>
+
+</head>
+<body>  
+
+    <div class="left-menu-responesive">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>
+
+    <div id="left-menu-rs" class="col-md-4 sidepanel" style="margin: 30px 0px 30px 0px;">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a style="color:red;">SALE</a>
+        <a >Makeup</a>
+        <a href="jsmface.html">Face</a>
+        <a href="jsmlip.html">Lip</a>
+        <a href="jsmeyes.html">Eyes</a>
+        <a href="jsmeyebrow.html">Eyebrow</a>
+    </div>
+
+    <div class="row">
+        <div class="col-md logo">
+            <a href="index.html">Premé</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav w-100 nav-list">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#1">Product</a>
+                        <ul class="sub-product">
+                            <li>
+                                <a href="heraface.html" class="nav-link1">HERA</a>
+                            </li>
+                            <li>
+                                <a href="jsmface.html" class="nav-link1">JUNG SEAM MOOL</a>
+                            </li>
+                            <li>
+                                <a href="lbrface.html" class="nav-link1">LILYBYRED</a>
+                            </li>
+                            <li>
+                                <a href="peface.html" class="nav-link1">PONY EFFECT</a>
+                            </li>
+                            <li>
+                                <a href="swsface.html" class="nav-link1">SULWHASOO</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">|</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#2">Pre-ordered Agreement</a>
+                        <ul class="sub-product">
+                            <li>
+                                <a href="#" class="nav-link1">Pre-ordered Agreement</a>
+                            </li>
+                        </ul>  
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">|</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#3">About Us</a>
+                        <ul class="sub-product">
+                            <li>
+                                <a href="#" class="nav-link1">Our Company</a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link1">Contact Us</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav nav-list" style="background-color: transparent;">
+                    <li class="nav-item">
+                        <div class="search-container">
+                            <input class="search" type="search" placeholder="Search" />
+                            <i class="fa fa-search btn-search"></i>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">|</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" class="nav-link"><img src="image/profilee.png" class="img-account"></a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">|</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">EN</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </div>
+
+    <div class="right-menu-panel">
+        <div class="menu-cart">
+            <button class="btn btnFeature">
+                <a href="#Cart"> <img src="image/shopping-basket.png" style="width: 20px;"> </a>
+            </button>
+        </div>
+
+        <div class="menu-feature">
+            <button class="btn btnFeature" id="btnFeature"><label>Feature</label></button>
+            <div id="feature-content" class="dropdown-content dropdown-content-right">
+                <a href="#Interesting">Interesting</a>
+                <a href="#New_Product">New Product</a>
+                <a href="#Low_Price">Low Price</a>
+                <a href="#High_Price">High Price</a>
+                <a href="#AtoZ">A to Z</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-header">
+        <div class="page-title">
+            <label style="font-family: Playfair Display;">JUNG SEAM MOOL</label>
+        </div>
+        
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-1 left-menu">
+            <ul>
+                <li style="font-family: Playfair Display;"><a  style="color:red;">SALE</a></li>
+                <li class="active" style="font-family: Playfair Display;"><a>Makeup</a></li>
+                <li><a href="jsmface.html">Face</a></li>
+                <li><a href="jsmlip.html">Lip</a></li>
+                <li><a href="jsmeyes.html">Eyes</a></li>
+                <li><a href="jsmeyebrow.html">Eyebrow</a></li>
+            </ul>
+        </div>
+
+        <div class="col-md" style="text-align:center;margin: 0px;padding: 0px 20px 0px 10px;">
+        
+            <div class="row justify-content-md-center" style="background-color: #f6f6f4;margin:30px 0px 0px 0px;min-height: 850px;">
+
+                <div class="col-md-4" style="margin: 30px 0px 30px 0px;">
+                    <a href="#" class="product-content">
+                        <img src="image/ebju1.png">
+                        <div class="product-label">REFINING COLOR-BONY BROW</div>
+                        <div class="product-price"> 650 THB </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md" style="text-align: center;">
+            <div class="pagination-custom">
+                <a href="jsmface.html"> << </a>
+                <a href="jsmlip.html"> < </a>
+                <a href="" class="active">1</a>
+                <a href="jsmeyes.html"> > </a>
+                <a href="jsmeyebrow.html"> >> </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
